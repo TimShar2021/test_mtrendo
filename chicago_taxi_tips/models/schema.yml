@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: final_tips_changes
+    description: "Таблица с изменениями чаевых для топ-3 машин"
+    columns:
+      - name: taxi_id
+        description: "ID такси"
+      - name: year_month
+        description: "Год и месяц"
+      - name: tips_sum
+        description: "Сумма чаевых"
+      - name: tips_change
+        description: "Изменение чаевых в процентах по сравнению с предыдущим месяцем"
