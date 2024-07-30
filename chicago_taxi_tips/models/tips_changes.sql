@@ -7,6 +7,7 @@ WITH monthly_tips AS (
         {{ source('chicago_taxi', 'taxi_trips') }}
     WHERE
         taxi_id IN (SELECT taxi_id FROM {{ ref('top_3_taxi') }})
+        AND trip_start_timestamp >='2018-04-01'
     GROUP BY
         taxi_id, year_month
 ),
